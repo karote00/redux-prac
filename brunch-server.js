@@ -1,7 +1,6 @@
 var express	=	require('express');
 var http		= require('http');
 var Path		=	require('path');
-// var fs	 = require('fs');
 
 var server = {
 	port: 8080,
