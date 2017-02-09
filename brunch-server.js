@@ -20,7 +20,7 @@ module.exports = (port, path, callback) => {
 	const serve = (path, cache) => express.static(__dirname + path);
 
   app.use('/public', serve('/public'));
-	app.use('/app', serve('./app'));
+	app.use('/app', serve('/app'));
 
 
 	app.get('/', function(req, res) {
