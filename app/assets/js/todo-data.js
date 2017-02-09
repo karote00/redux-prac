@@ -1,3 +1,2 @@
-// import { createStore } from 'redux';
-// console.log(createStore)
+import { createStore } from 'redux';
 console.log('todo-data')
