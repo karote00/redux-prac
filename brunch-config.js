@@ -10,5 +10,12 @@ exports.files = {
 };
 
 exports.plugins = {
-  babel: {presets: ['latest']}
+  babel: {
+  	presets: ['es2015', 'es2016', 'react'],
+  	ignore: [
+      /^(bower_components|vendor)/,
+      'app/legacyES5Code/**/*'
+    ],
+    pattern: /\.(es6|jsx)$/ // js and jsx are defaults.
+  }
 };

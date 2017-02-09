@@ -12,8 +12,10 @@
   "dependencies": {},
   "devDependencies": {
     "auto-reload-brunch": "^2",
-    "babel-brunch": "~6.0",
+    "babel-brunch": "^6.0.6",
+    "babel-preset-env": "^1.1.8",
     "babel-preset-latest": "^6",
+    "babel-preset-react": "^6.22.0",
     "brunch": "^2",
     "clean-css-brunch": "^2",
     "uglify-js-brunch": "^2"
