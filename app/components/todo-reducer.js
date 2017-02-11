@@ -1,6 +1,4 @@
-import { createStore } from 'redux';
-
-function todos(state = [], action) {
+const todos = (state = {}, action) => {
 	switch (action.type) {
 		case 'ADD_TODO':
 			return [...state, {
@@ -25,13 +23,4 @@ function todos(state = [], action) {
 	}
 }
 
-
-function todoData(state = {}, action) {
-	return {
-		todos: todos(state.todos, action)
-	}
-}
-
-const todoStore = createStore(todoData);
-
-export { todoStore };
+export default todos;
