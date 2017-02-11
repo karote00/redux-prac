@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import { tabStore } from './todo-data';
-console.log('a')
-// console.log(tabStore)
+import { tabStore } from './todo-data';
 
 export default class App extends Component {
 	render() {
