@@ -3,16 +3,14 @@ exports.files = {
   javascripts: {
     joinTo: {
       'vendor.js': /^(?!app)/, // Files that are not in `app` dir.
-      'app.js': [
-      	/^app/,
-      	/^(app\/assets\/js)/
-      ]
+      'app.js': /^app/
     }
   },
   stylesheets: {joinTo: 'app.css'}
 };
 
 exports.plugins = {
+  autoReload: {enabled: true},
   babel: {
   	presets: ['es2015', 'es2016', 'react'],
   	ignore: [
@@ -23,12 +21,13 @@ exports.plugins = {
   }
 };
 
-exports.paths = {
-	watched: [
-		'app'
-	]
-};
+// exports.paths = {
+// 	watched: [
+// 		'app/assets'
+// 	]
+// };
 
-exports.conventions = {
-	assets: ['app/assets']
-};
+// exports.conventions = {
+//   ignored: () => false,
+// 	assets: ['app/assets']
+// };
