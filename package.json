@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.22.0",
     "brunch": "^2",
     "clean-css-brunch": "^2",
+    "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "uglify-js-brunch": "^2"
   }
