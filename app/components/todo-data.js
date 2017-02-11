@@ -32,6 +32,6 @@ function todoData(state = {}, action) {
 	}
 }
 
-const tabStore = createStore(todoData);
+const todoStore = createStore(todoData);
 
-export {tabStore};
+export { todoStore };
