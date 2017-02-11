@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import { tabStore } from './todo-data';
+import { Todo } from 'components/todo';
+import { todoStore } from './todo-data';
 
 export default class App extends Component {
+	addTodo() {
+		todoStore.dispatch({type: 'ADD_TODO', text: todoStore.getState().todos.length + 1});
+	}
+
 	render() {
-		console.log('Here Todo')
 		return (
-			<div>I'm Todo!</div>
+			<div>
+				<button onClick={this.addTodo}>Add Todo</button>
+				<ul>
+					<Todo />
+				</ul>
+			</div>
 		);
 	}
 }
