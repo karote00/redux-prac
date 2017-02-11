@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { createStore } from 'redux';
 import todoStore from 'components/todo-reducer';
+import todo from 'components/todo';
 
 let store = createStore(todoStore);
 
@@ -8,7 +9,11 @@ const TodoList = ({ todos }) => {
 	return (
 		<div>
 			<ul>
-				<li>Hi I'm Todo List!</li>
+				{todos.map(todo =>
+					<Todo
+						{...todo}
+					 />
+				)}
 			</ul>
 		</div>
 	)
@@ -22,20 +27,3 @@ TodoList.propTypes = {
 }
 
 export default TodoList;
-
-// export class TodoList extends Component {
-// 	addTodo() {
-// 		// store.dispatch({type: 'ADD_TODO', text: '123'});
-// 	}
-
-// 	render() {
-// 		return (
-// 			<div>
-// 				<button onClick={this.addTodo}>Add Todo</button>
-// 				<ul>
-// 					<li>I'm todo list!</li>
-// 				</ul>
-// 			</div>
-// 		);
-// 	}
-// }
