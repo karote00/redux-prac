@@ -6,7 +6,11 @@ exports.files = {
       'app.js': /^app/
     }
   },
-  stylesheets: {joinTo: 'app.css'}
+  stylesheets: {
+    joinTo: {
+      'app.css': /^app/
+    }
+  }
 };
 
 exports.plugins = {
