@@ -3,7 +3,8 @@ const todos = (state = [], action) => {
 		case 'ADD_TODO':
 			return [...state, {
 				text: action.text,
-				completed: false
+				completed: false,
+				id: state.length > 0? state[state.length - 1].id + 1: 1
 			}];
 		case 'COMPLETE_TODO':
 			return [
