@@ -1,0 +1,31 @@
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.add {
+	display: inline-block;
+	border: 1px solid black;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.todo-input {
+	height: 16px;
+	vertical-align: top;
+}
+
+.todo-checkbox {
+	&:checked {
+		~ label {
+			text-decoration: line-through;
+		}
+	}
+}
