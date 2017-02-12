@@ -9,7 +9,6 @@ let store = createStore(todoStore);
 
 document.addEventListener('DOMContentLoaded', () => {
   // do your setup here
-  console.log('Initialized app');
   render(
   	<Provider store={store}>
   		<App />

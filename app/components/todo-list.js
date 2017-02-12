@@ -41,26 +41,3 @@ class TodoList extends React.Component {
 }
 
 export default TodoList;
-
-// const TodoList = ({ todos }) => {
-// 	return (
-// 		<div>
-// 			<ul>
-// 				{todos.map(todo =>
-// 					<Todo
-// 						{...todo}
-// 					 />
-// 				)}
-// 			</ul>
-// 		</div>
-// 	)
-// }
-
-// TodoList.propTypes = {
-// 	todos: PropTypes.arrayOf(PropTypes.shape({
-// 		text: PropTypes.string.isRequired,
-// 		completed: PropTypes.bool.isRequired
-// 	}))
-// }
-
-// export default TodoList;
