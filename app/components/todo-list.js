@@ -23,8 +23,8 @@ class TodoList extends React.Component {
 			<div>
 				<div>
 					<form onSubmit={this.handleSubmit}>
-						<input type="text" ref={(input) => this.input = input} />
-						<span onClick={this.addTodo}>Add Todo</span>
+						<input type="text" ref={(input) => this.input = input} className="todo-input" />
+						<span onClick={this.addTodo} className="add">＋</span>
 					</form>
 				</div>
 				<ul>
@@ -32,6 +32,7 @@ class TodoList extends React.Component {
 						<Todo
 							key={todo.id}
 							{...todo}
+							updateComplete={this.props.updateComplete}
 						 />
 					)}
 				</ul>
