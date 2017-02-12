@@ -8,9 +8,6 @@ let store = createStore(todoStore);
 class TodoList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			todos: store.getState().todos || [],
-		}
 
 		this.addTodo = this.addTodo.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +31,7 @@ class TodoList extends Component {
 					</form>
 				</div>
 				<ul>
-					{this.state.todos.map(todo =>
+					{this.props.todos.map(todo =>
 						<Todo
 							{...todo}
 						 />
