@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
-class Todo extends Component {
+class Todo extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
 		return (
-			<li>{this.props.todo.text}</li>
+			<li>{this.props.text}</li>
 		)
 	}
 }
