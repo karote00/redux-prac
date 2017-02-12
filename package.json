@@ -23,6 +23,7 @@
     "clean-css-brunch": "^2",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
+    "sass-brunch": "^2.10.2",
     "uglify-js-brunch": "^2"
   }
 }
