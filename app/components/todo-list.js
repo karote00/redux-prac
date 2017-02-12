@@ -1,11 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import { createStore } from 'redux';
 import todoStore from 'components/todo-reducer';
-import todo from 'components/todo';
+import Todo from 'components/todo';
 
 let store = createStore(todoStore);
 
-class TodoList extends Component {
+class TodoList extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -14,7 +14,7 @@ class TodoList extends Component {
 	}
 
 	addTodo() {
-		store.dispatch({type: 'ADD_TODO', text: this.input.value});
+		this.props.addTodo(this.input.value);
 	}
 
 	handleSubmit(e) {
@@ -22,6 +22,7 @@ class TodoList extends Component {
 	}
 
 	render() {
+		console.log(this)
 		return (
 			<div>
 				<div>
@@ -33,6 +34,7 @@ class TodoList extends Component {
 				<ul>
 					{this.props.todos.map(todo =>
 						<Todo
+							key={todo.id}
 							{...todo}
 						 />
 					)}
