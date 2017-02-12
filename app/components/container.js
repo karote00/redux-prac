@@ -2,7 +2,8 @@ import TodoList from 'components/todo-list';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-	return { todos: state.todos };
+	console.log(state)
+	return { todos: state };
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -12,8 +13,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const App = connect(
-		mapStateToProps,
-		mapDispatchToProps
+		mapStateToProps
 	)(TodoList);
 
 export default App;
