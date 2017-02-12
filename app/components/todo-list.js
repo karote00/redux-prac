@@ -5,25 +5,48 @@ import todo from 'components/todo';
 
 let store = createStore(todoStore);
 
-const TodoList = ({ todos }) => {
-	return (
-		<div>
-			<ul>
-				{todos.map(todo =>
-					<Todo
-						{...todo}
-					 />
-				)}
-			</ul>
-		</div>
-	)
-}
+class TodoList extends Component {
+	constructor(props) {
+		super(props);
+		this.todos = [];
+	}
 
-TodoList.propTypes = {
-	todos: PropTypes.arrayOf(PropTypes.shape({
-		text: PropTypes.string.isRequired,
-		completed: PropTypes.bool.isRequired
-	}))
+	render() {
+		return (
+			<div>
+				<ul>
+					{this.todos.map(todo =>
+						<Todo
+							{...todo}
+						 />
+					)}
+				</ul>
+			</div>
+		)
+	}
 }
 
 export default TodoList;
+
+// const TodoList = ({ todos }) => {
+// 	return (
+// 		<div>
+// 			<ul>
+// 				{todos.map(todo =>
+// 					<Todo
+// 						{...todo}
+// 					 />
+// 				)}
+// 			</ul>
+// 		</div>
+// 	)
+// }
+
+// TodoList.propTypes = {
+// 	todos: PropTypes.arrayOf(PropTypes.shape({
+// 		text: PropTypes.string.isRequired,
+// 		completed: PropTypes.bool.isRequired
+// 	}))
+// }
+
+// export default TodoList;

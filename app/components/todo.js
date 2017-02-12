@@ -1,14 +1,29 @@
 import React, { Component, PropTypes } from 'react';
 
-const Todo = ({ todo }) => {
-	return (
-		<li>{todo.text}</li>
-	)
-}
+class Todo extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-Todo.propTypes = {
-	text: PropTypes.string.isRequired,
-	completed: PropTypes.bool.isRequired
+	render() {
+		return (
+			<li>{this.props.todo.text}</li>
+		)
+	}
 }
 
 export default Todo;
+
+
+// const Todo = ({ todo }) => {
+// 	return (
+// 		<li>{todo.text}</li>
+// 	)
+// }
+
+// Todo.propTypes = {
+// 	text: PropTypes.string.isRequired,
+// 	completed: PropTypes.bool.isRequired
+// }
+
+// export default Todo;
