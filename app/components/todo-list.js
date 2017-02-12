@@ -1,9 +1,6 @@
 import React from 'react';
 import { createStore } from 'redux';
-import todoStore from 'components/todo-reducer';
 import Todo from 'components/todo';
-
-let store = createStore(todoStore);
 
 class TodoList extends React.Component {
 	constructor(props) {
@@ -22,7 +19,6 @@ class TodoList extends React.Component {
 	}
 
 	render() {
-		console.log(this)
 		return (
 			<div>
 				<div>
