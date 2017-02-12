@@ -12,6 +12,7 @@ class TodoList extends React.Component {
 
 	addTodo() {
 		this.props.addTodo(this.input.value);
+		this.input.value = '';
 	}
 
 	handleSubmit(e) {
