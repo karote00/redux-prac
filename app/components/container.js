@@ -7,7 +7,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		addTodo: (text) => dispatch({type: 'ADD_TODO', text: text})
+		addTodo: (text) => dispatch({type: 'ADD_TODO', text: text}),
+		updateComplete: (id) =>dispatch({type: 'COMPLETE_TODO', id: id})
 	}
 }
 
