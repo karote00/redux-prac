@@ -8,14 +8,16 @@ let store = createStore(todoStore);
 class TodoList extends Component {
 	constructor(props) {
 		super(props);
-		this.todos = [];
+		this.state = {
+			todos: store.getState().todos || []
+		}
 	}
 
 	render() {
 		return (
 			<div>
 				<ul>
-					{this.todos.map(todo =>
+					{this.state.todos.map(todo =>
 						<Todo
 							{...todo}
 						 />
